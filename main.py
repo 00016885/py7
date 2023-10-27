@@ -53,9 +53,28 @@
 # print(h1.get('B',1))
 
 
-csf = {
-    'cw1-weight': 0.4,
-    'cw1-mark': 79,
-    'exam-weight': 0.6,
-    'exam-mark': 65
-}
+# csf = {
+#     'cw1-weight': 0.4,
+#     'cw1-mark': 79,
+#     'exam-weight': 0.6,
+#     'exam-mark': 65
+# }
+# print(csf.get('cw1-weight')*csf.get('cw1-mark')+csf.get('exam-weight')*csf.get('exam-mark'))
+
+
+def histogram(s):
+    d = dict()
+    for c in s:
+        if c not in d:
+            d[c] = 1
+        else:
+            d[c] += 1
+    return d
+
+def print_hist(h):
+    d = dict()
+    for c in h:
+        print(c, h[c])
+
+h=histogram('university')
+print_hist(h)
